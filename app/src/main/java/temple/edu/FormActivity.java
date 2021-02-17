@@ -48,7 +48,9 @@ public class FormActivity extends AppCompatActivity {
                 if (check == true){
                     TextView confirm = findViewById(R.id.sampleText);
                     confirm.setVisibility(View.VISIBLE);
-                    confirm.setText("Successful Signup!");
+                    TextView firstName = findViewById(R.id.editFirstName);
+                    TextView lastName = findViewById(R.id.editLastName);
+                    confirm.setText(String.format("Welcome %s %s. Thank you for signing up!", firstName.getText(), lastName.getText()));
                 }
 
             }
